@@ -1,0 +1,1026 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	background: black;
+	color: white;
+}
+
+/* Main Menu */
+
+#main-menu {
+	background-color:black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+
+#main-menu ul {
+	padding: 0.5em 0;
+	text-align: center;
+	
+}
+
+#main-menu li {
+	list-style: none;
+	padding: 0.1em 0.5em;
+}
+
+#main-menu a {
+	display: block;
+	font-size: 1.5em;
+	color:orange;
+	text-decoration: none;
+	padding: 0.25em 1em;
+	text-transform: uppercase;
+	border-radius: 3px;
+	text-shadow: rgba(0,0,0,0.5) 0 1px 0;
+	transition: 0.5s ease;
+}
+
+#main-menu a:hover {
+	background: orange;
+	color:black;
+}
+
+#main-menu a:active{
+	transform: scale(0.8)
+}
+
+#main-menu li.current a {
+	background: orange;
+	color: black;
+	text-shadow: rgba(0,0,0,0.5) 0 1px 0;
+}
+
+/* Page Header */
+
+#page-header {
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 1.5em;
+
+}
+
+#page-header ,#banner-title-chapter .banner-title {
+	padding-top: 150px;
+	
+}
+
+@keyframes stars{
+	0%   {left:-250px; top:10%;}
+  25%  {left:21%; top:50%;}
+  50%  {left:43%; top:85%;}
+  75%  {left:66%; top:50%;}
+  100% {left:100%; top:10%;}
+}
+.stars img{
+	float:left;
+	max-width: 250px;
+	position: absolute;
+	bottom: 20%;
+	left:1%;
+	animation-timing-function: linear;
+	animation-name: stars;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	
+}
+
+#page-header h1{
+	font-weight: 300;
+	font-size: 3em;
+	line-height: 1em;
+	padding: 0.1em 1em 0 1em;
+	color: white;
+	
+}
+
+
+#page-header p {
+	padding: 1em 1em 3% 1em;
+	color: white;
+	z-index: 1;
+}
+
+#real-time p{
+	margin:0;
+	padding:5px;
+	
+}
+
+#page-header .header-button {
+	margin-top:3%;
+	text-align: center;
+	
+}
+
+#page-header .header-button a {
+	display: inline-block;
+	background-color: orange;
+	color: black;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	transition: all 0.5s ease-in;
+}
+
+#page-header .header-button a:hover {
+	color: black;
+	background-color: white;
+	box-shadow: none;
+	transform: scale(1.2)
+}
+
+#page-header .header-button a:active{
+	transform: scale(0.9)
+}
+
+
+
+body.page-overview #page-header {
+	background-image: url(../images/Mars.png);
+	
+}
+
+body.page-overview {
+	background-image: url(../images/stars.jpg);
+	background-size:100%;
+	background-repeat: repeat-y;
+	z-index: -1;
+}
+
+
+
+/* Main Content */
+
+#main-content,
+#about,
+#author {
+	padding: 1.5em;
+	overflow: hidden;
+}
+
+#about > h2,
+#author > h2 {
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: 300;
+	width: 100%;
+	margin-bottom: 1em;
+	color: orange;
+}
+
+
+
+
+#main-content p {
+	margin-bottom: 1.5em;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+.read-more {
+	width: 100%;
+	padding-top: 1em;
+}
+
+#showlog{
+	font-size: 1.5em;
+	width: 30%;
+	margin-bottom: 25px;
+	background: black;
+	color:orange;
+	clear:both;
+	padding: 5px;
+}
+
+#log{
+	display: none;
+}
+
+
+/* About */
+
+#about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#about article {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: auto 100px;
+	padding-bottom: 1.5em;
+	padding-top: 130px !important;
+}
+
+#about article h3 {
+	font-size: 1.8em;
+	line-height: 1em;
+	margin-top:25%;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+#about article  p {
+	margin-bottom: 1em;
+	
+}
+
+
+#about article.overview{
+	background-image: url(../images/bookcover.jpeg);
+	background-size:25%;
+	
+}
+#about article.overview p{
+	font-size: 1.5em;
+	line-height: 175%;
+}
+
+#about article.comments {
+	background-image: url(../images/writing.jpg);
+	background-size: 50%;
+
+}
+#about article.comments p{
+	color:grey;
+	text-align: right;
+	margin:20px 0;
+	
+}
+#about article.comments h4{
+	color: orange;
+	padding-left:10%;
+	font-size:1.5em;
+}
+
+
+
+
+
+
+
+/* Author */
+
+
+#author .author a{
+	background: black;
+	color: orange;
+	font-size: 1.2em;
+	transition: all 0.2s ease-in-out;
+}
+
+#author .author a:hover{
+	background: orange;
+	color: black;
+	text-decoration: none;
+	
+}
+
+#author article figure {
+	width: 100%;
+	padding-bottom: 1.5em;
+}
+
+#author article img {
+	
+	border-radius: 70%;
+	padding-left: 150px;
+	max-width: 100%;
+}
+#author article {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3em;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+#author h4{
+	color: orange;
+	font-size:1.5em;
+}
+
+
+#author h3 {
+	color:white;
+	margin-bottom: 1em;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5em;
+	line-height: 140%;
+}
+
+#author li{
+	list-style-type: none;
+	font-size:1.2em;
+	padding:15px;
+}
+
+
+body.js #author #expand-button a{
+	color: orange;
+	text-transform: uppercase;
+	font-size:1.2em;
+
+}
+
+body.js #author #expand-button a:after {
+	content: "\25BC";
+	
+}
+
+body.js #author .novels {
+	height: 0;
+	overflow: hidden;
+	
+}
+
+body.js #author .expanded #expand-button {
+	display: none;
+}
+
+body.js #author .expanded .novels {
+	height: 100%;
+}
+
+
+
+
+
+/* Page Footer */
+
+#page-footer {
+	
+	padding: 1.5em;
+	text-transform: uppercase;
+	z-index: -1;
+	justify-content: center;
+	bottom:0;
+}
+
+#page-footer li {
+	list-style: none;
+	
+}
+
+#page-footer a {
+	color: orange;
+	padding:1em;
+	text-decoration: none;
+	font-size:1.1em;
+}
+
+#page-footer a:hover {
+	background: orange;
+	color: black;
+}
+
+#page-footer li.current a {
+	background: orange;
+	color: black;
+	text-shadow: rgba(0,0,0,0.5) 0 1px 0;
+}
+
+
+
+/* page-chapters */
+
+@keyframes rover{
+	0%   {left:-250px; top:74%;}
+  
+  100% {left:100%; top:74%;}
+}
+.rover img{
+	float:left;
+	max-width: 250px;
+	position: absolute;
+	bottom: 20%;
+	left:1%;
+	animation-timing-function: linear;
+	animation-name: rover;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	
+}
+
+body.page-chapters #page-header {
+	background-image: url(../images/Mars5.jpg);
+}
+
+body.page-chapters {
+	background-image: url(../images/stars.jpg);
+	background-size:100%;
+}
+
+#content{
+	padding: 1em;
+	overflow: hidden;
+	
+}
+
+
+#content > h2{
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: 300;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom:0.5em;
+	color: orange;
+}
+
+#content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#content article {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: auto 100px;
+	padding-bottom: 1.5em;
+	padding-top: 3% !important;
+}
+
+#content article h3 {
+	font-size: 2em;
+	margin-bottom: 1em;
+	text-align: center;
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#content article.reading-content p{
+	padding: 10px;
+	padding-left: 39%;
+	
+}
+#content article.reading-content a{
+	font-size :20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color:orange;
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+#content article.reading-content a:hover{
+	color:black;
+	background:orange;
+	font-size:30px;
+}
+
+
+
+#content article.reading-content {
+	background-image: url(../images/PIA23177_modest.jpg);
+	background-size: 21%;
+	max-width: 100%;
+	background-position-y: 50%;
+	background-position-x: 20%;
+	border-block-start-style: double;
+	border-block-end-style:double;
+	border-block-start-color: white;
+	border-block-end-color: white;
+	
+}
+
+#content article.studying-content {
+	background-size: 21%;
+	background-image: url(../images/PIA23138_modest.jpg);
+	max-width: 100%;
+	background-position-y: 50%;
+	background-position-x: 20%;
+	border-block-end-style:double;
+	border-block-end-color: white;
+
+}
+
+#content article.studying-content a{
+	font-size :20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color:orange;
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+#content article.studying-content a:hover{
+	color:black;
+	background:orange;
+	font-size:30px;
+}
+
+#content article.studying-content p{
+	padding: 10px;
+	padding-left: 39%;
+}
+
+/* Chapter-1 */
+
+
+#main-content{
+	margin-top: 15px;
+	padding-bottom: 0;
+}
+
+body.page-chapters-1{
+	background-image: url(../images/stars5.jpg);
+	background-size: 100%;
+}
+
+
+#main-content h1{
+	border-block-end-style: double;
+	border-block-end-color: orange;
+	color:orange;
+	font-size: 2em;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+#main-content h3{
+	font-size: 1.4em;
+	margin-bottom: 20px;
+}
+
+#main-content p{
+	font-family: sans-serif;
+	flex-wrap: wrap;
+	
+	
+}
+#main-content .last-p{
+	border-block-end-style: double;
+	border-block-end-color: orange;
+	padding-bottom:40px;
+}
+
+.chapter-1-button{
+	text-align: right;
+	margin-right: 5%;
+
+}
+.chapter-1-button a{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 1.3em;
+	color:black;
+	background: orange;
+	padding:10px;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 1s ease;
+}
+.chapter-1-button a:hover{
+	color:black;
+	background: white;
+	
+}
+
+
+#main-content figure.chapter-1-img img {
+	display: block;
+	max-width: 100%;
+	margin-top:20px;
+	margin-left: 20px;
+	
+}
+
+#main-content figure.chapter-1-img{
+	float:right;
+	max-width: 40%;
+	margin-left:1em;
+	margin-right:1em;
+	border-left-style: dashed;
+	border-left-color: grey;
+}
+
+#main-content figure.chapter-1-img figcaption{
+	text-align: center;
+	color: orange;
+	text-shadow: 10px;
+	margin-top:10px;
+}
+
+.next-chapter{
+	float: left;
+	margin-left: 5%;
+	
+}
+
+.next-chapter a{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 1.3em;
+	color:black;
+	background: orange;
+	padding:10px;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 1s ease;
+}
+
+.next-chapter a:hover{
+	color:black;
+	background: white;
+}
+
+/* Studying-1 */
+.studying-1 a{
+	font-size: 1.8em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color:orange;
+	transition: all 0.5s ease;
+}
+
+.studying-1 a:hover{
+	color: black;
+	background: orange;
+}
+
+.studying-1 iframe{
+	float:left;
+	margin-right:10px;
+}
+
+/* Chapter-2 */
+
+#main-content figure.chapter-2-img img {
+	display: block;
+	max-width: 100%;
+	margin-top:20px;
+	padding-right: 5px;
+	border-right-style: dashed;
+	border-right-color: grey;
+	height: 500px;
+}
+
+#main-content figure.chapter-2-img{
+	float:left;
+	max-width: 40%;
+	margin-right:1em;
+	margin-left:1em;
+	
+}
+
+#main-content figure.chapter-2-img figcaption{
+	text-align: center;
+	color: orange;
+	text-shadow: 10px;
+	margin-top:10px;
+}
+
+/* Studying-2 */
+#growing-potatoes h4{
+	font-size: 1.8em;
+	margin-bottom:15px;
+	clear: both;
+	color: orange;
+}
+
+#growing-potatoes figure.growing-potatoes{
+	float: left;
+	margin-right: 20px;
+}
+
+#growing-potatoes p{
+	line-height: 200%;
+	
+}
+/* Chapter-3 */
+
+#main-content figure.chapter-3-img img {
+	display: block;
+	max-width: 100%;
+	margin-top:20px;
+	padding-right: 5px;
+	height: 450px;
+	
+}
+
+#main-content figure.chapter-3-img{
+	float:left;
+	max-width: 100%;
+	margin-left: 22%;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom-style: dashed;
+	border-bottom-color: grey;
+}
+
+#main-content figure.chapter-3-img figcaption{
+	text-align: center;
+	color: orange;
+	text-shadow: 10px;
+	margin-top:10px;
+}
+
+#main-content .chapter-3-article{
+	clear: both;
+}
+
+/* studying-3 */
+#newton h3,h5{
+	color: orange;
+	font-size: 1.3em;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-bottom: 10px;
+}
+
+#newton h5{
+	text-align: center;
+}
+
+#newton p{
+	clear: both;
+}
+
+#newton figure.bus {
+	float: left;
+	margin-left: 35%;
+	margin-top: 20px;
+}
+
+#newton nav.answer{
+	text-align: center;
+}
+
+#newton a{
+	background: orange;
+	color: black;
+	font-size:25px;
+	border-radius: 20%;
+	padding: 5px;
+}
+
+#newton a:hover{
+	background: white;
+}
+
+#answer-popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.75);
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#answer-popup .solution {
+	background: black;
+	color:white;
+	margin: 5em;
+	padding-top: 3em;
+	box-shadow: rgba(0,0,0,0.25) 5px 5px 10px;
+	position: relative;
+	border-radius: 15px;
+}
+
+#answer-popup .solution h2{
+	text-align: center;
+	margin-bottom: 20px;
+	color:orange;
+	font-size: 2.5em;
+} 
+
+#answer-popup .solution p{
+	line-height: 150%;
+	padding-bottom: 200px;
+	padding-left:20px;
+	font-size:1.8em;
+}
+
+#answer-popup .close-button a {
+	color: red;
+	text-decoration: none;
+	font-size: 1.25em;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0%;
+	left: 90%;
+	margin: 1em;
+}
+
+#answer-popup .close-button a:hover{
+	color: white;
+}
+
+#answer-popup .close-button a::before {
+	content: "\2716"; 
+	padding-right: 5px;
+	font-size: 2em;
+}
+
+body.show-answer-popup {
+	overflow: hidden; 
+}
+
+body.show-answer-popup #answer-popup {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* feedback */
+#feedback h2{
+	color: orange;
+	margin-top:10%;
+	text-align: center;
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+
+#feedback fieldset {
+	align-self: center;
+	width: 50%;
+	margin-top: 2em;
+	margin-bottom:5%;
+	margin-left: 22%;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 10px;
+    background:whitesmoke;
+	background-size: 100%;
+}
+
+#feedback .detail {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+#feedback .detail > label {
+    font-size: 1.4em;
+    width: 25%;
+    padding-right: 2em;
+    text-align: right;
+	text-shadow: grey 3px 3px 5px;
+	color: black;
+
+}
+#feedback .detail .question {
+    width: 50%;
+}
+
+
+
+#feedback input, textarea {
+    box-shadow: gray 3px 3px 5px;
+    background: white;
+    border: 1px double gray;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+
+
+#feedback button {
+    font-size: 1.2em;
+	background: orange;
+	text-shadow: grey 3px 3px 5px;
+    padding: 0.5em 1em;
+    color: white;
+	border: 1px double gray; 
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+#feedback button:hover{
+	background: black;
+	color:orange;
+}
+
+
+/* acknowledgements */
+
+#acknowledgements{
+	margin-top:10%;
+}
+
+#acknowledgements h1{
+	text-align: center;
+	color: orange;
+	font-size: 2.3em;
+}
+
+
+#acknowledgements li{
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top:10px;
+	font-size: 1.5em;
+	line-height: 150%;
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) {
+
+	body {
+		font-size: 15px;
+		line-height: 1.5em;
+	}
+
+	/* Main Menu */
+
+	#main-menu ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		text-align: left;
+	}
+
+	#main-menu li {
+		padding: 0.75em 0.5em;
+	}
+
+	/* Page Header */
+
+	#page-header {
+		min-height: 80vh;
+	}
+
+	#page-header h1 {
+		font-size: 4em;
+	}
+
+	/* Main Content */
+
+	#main-content,
+	#about,
+	#author{
+		padding: 3em;
+	}
+
+	/* About */
+
+	#about article {
+		width: 30%;
+		padding: 2em 5em;
+	}
+
+
+	/* Author */
+
+	#author article {
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: nowrap;
+		text-align: left;
+	}
+
+	#author article figure {
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 15px;
+	}
+	
+	/* Page Footer */
+	
+
+	#page-footer ul {
+		display: flex;
+		justify-content: center;
+	
+	}
+
+	#page-footer li {
+		padding: 0;
+	}
+
+
+}
